@@ -54,3 +54,11 @@ There are a few things you must do to get the app up and running. After that the
 * Set up the weather service in a free cloud hosting service, e.g. [AWS](https://aws.amazon.com/free/) or [Google Cloud](https://cloud.google.com/free/).
 
 * Write [ansible](http://docs.ansible.com/ansible/intro.html) playbooks for installing [docker](https://www.docker.com/) and the app itself.
+
+
+# What I did
+I completed the mandatory part of the assignment so current weather data (the images and temperature) for Helsinki is displayed. Also part of the assignment I created Dockerfiles for frontend and backend respectively and linked the two with a docker-compose.yml file. So now after navigating (or by simply opening the project with Visual Studio Code) to the correct folder location where docker-compose.yml is located at and then using command "docker-compose up --build" docker should build and run the project successfully (not sure if this is important but I had to use Docker Toolbox since I have Windows 7 and Docker desktop is not available for Windows 7). Though as a note I had to change the ENDPOINT in webpack.config.js to match my docker default machine ip address so I would assume that you would have to do the same.
+
+As for the optional exercises I completed the forecast part of the assignment and the app now displays the forecast for the next six hours with images, temperature, time and date. I tried to do the geolocation part also but realised too late that I would need a SSL certificate and to create one for localhost is doable but I don't know where or how OpenSSL certificate data is stored and if it can be uploaded to github... As of such if I had uploaded a project containing geolocation code the project would have not worked at all since regular http geolocation has been removed as a feature and no data would be shown.
+
+The app is not particularly pretty but it works which was at least for me the most important part.
